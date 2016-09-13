@@ -12,7 +12,8 @@ tox:
 travis-install:
 	pip install --user -q -r test-requirements.txt
 
-travis: travis-install tox
+travis: travis-install
+	TOXENV=py$(echo $TRAVIS_PYTHON_VERSION | tr -d .) tox
 
 clean-pyc:
 	find . -name '*.pyc' -exec rm -f {} +
