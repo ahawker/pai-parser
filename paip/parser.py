@@ -73,7 +73,9 @@ def parse_gen(data, visitor=NullVisitor, delimiter=tokenizer.DEFAULT_DELIMITER,
         raise ValueError('visitor does not support group_size and/or rtl')
 
     # Create iterator that yields token groups in order (conditionally right-to-left).
-    tokens = grouper.group_gen(tokenizer.tokenize_iter(data, delimiter), group_size)
+    tokens = tokenizer.tokenize_iter(data, delimiter)
+    if group_size:
+        tokens = grouper.group_gen(tokens, group_size)
     if rtl:
         tokens = reversed(list(tokens))
 
