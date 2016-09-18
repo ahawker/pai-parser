@@ -1,5 +1,7 @@
 # paip (pai-parser)
 
+[![Build Status](https://travis-ci.org/ahawker/paip.svg?branch=master)](https://travis-ci.org/ahawker/paip)
+
 Describe and parse shell-safe strings into a structured syntax.
 
 This package is used as the underlying parser for the [pai](https://github.com/ahawker/pai) language.
