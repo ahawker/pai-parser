@@ -1,0 +1,7 @@
+# paip/requirements/travis.txt
+#
+# Requirements for executing the paip test suite on Travis CI.
+
+-r test.txt
+
+tox-travis

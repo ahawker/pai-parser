@@ -1,0 +1,12 @@
+# https://travis-ci.org/ahawker/paip
+
+sudo: false
+language: python
+
+python:
+  - "3.3"
+  - "3.4"
+  - "3.5"
+
+install: "make travis-install"
+script: "make travis-script"

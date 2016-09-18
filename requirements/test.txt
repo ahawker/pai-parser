@@ -1,0 +1,8 @@
+# paip/requirements/test.txt
+# 
+# Requirements for executing the paip test suite.
+
+pytest
+pytest-cov
+pytest-mock
+pytest-pep8

@@ -1,19 +1,18 @@
-.PHONY: install-test-deps test tox-test travis clean-pyc
+.PHONY: test-install test tox travis-install travis-script clean-pyc
 
-install-test-deps:
-	pip install -q -r test-requirements.txt
+test-install:
+	pip install -q -r requirements/test.txt
 
-test: install-test-deps
+test: test-install
 	py.test tests
 
 tox:
 	tox
 
 travis-install:
-	pip install --user -q -r test-requirements.txt
+	pip install -q -r requirements/travis.txt
 
-travis: travis-install
-	TOXENV=py$(echo $TRAVIS_PYTHON_VERSION | tr -d .) tox
+travis-script: travis-install tox
 
 clean-pyc:
 	find . -name '__pycache__' -type d -exec rm -r {} +
