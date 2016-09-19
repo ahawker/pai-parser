@@ -1,6 +1,7 @@
 # paip (pai-parser)
 
 [![Build Status](https://travis-ci.org/ahawker/paip.svg?branch=master)](https://travis-ci.org/ahawker/paip)
+[![Coverage Status](https://coveralls.io/repos/github/ahawker/paip/badge.svg?branch=master)](https://coveralls.io/github/ahawker/paip?branch=master)
 
 Describe and parse shell-safe strings into a structured syntax.
 
