@@ -1,4 +1,4 @@
-.PHONY: test-install test tox travis-install travis-script clean-pyc
+.PHONY: test-install test tox-install tox travis-install travis-script clean-pyc
 
 test-install:
 	pip install -q -r requirements/test.txt
@@ -6,10 +6,16 @@ test-install:
 test: test-install
 	py.test tests
 
-tox:
+tox-install:
+	pip install -q -r requirements/tox.txt
+
+tox: tox-install
 	tox
 
-travis-install:
+coveralls-install:
+	pip install -q -r requirements/coveralls.txt
+
+travis-install: coveralls-install
 	pip install -q -r requirements/travis.txt
 
 travis-script: travis-install tox

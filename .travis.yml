@@ -10,3 +10,4 @@ python:
 
 install: "make travis-install"
 script: "make travis-script"
+after_success: "coveralls"

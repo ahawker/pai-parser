@@ -1,0 +1,7 @@
+# paip/requirements/tox.txt
+#
+# Requirements for executing the paip test suite using tox.
+
+-r test.txt
+
+tox
