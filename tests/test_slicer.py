@@ -2,12 +2,12 @@
     test_slicer
     ~~~~~~~~~~~
 
-    Tests for the :mod:`~paip.slicer` module.
+    Tests for the :mod:`~pai_parser.slicer` module.
 """
 
 import pytest
 
-from paip import slicer
+from pai_parser import slicer
 
 
 @pytest.fixture(scope='function', params=[
@@ -41,7 +41,7 @@ def iterable_with_incorrect_size(sequence):
 
 def test_iter_slice_raises_on_empty_iterable():
     """
-    Assert that :func:`~paip.slicer.iter_slice` raises a :class:`~paip.slicer.SliceIterableEmpty` exception
+    Assert that :func:`~pai_parser.slicer.iter_slice` raises a :class:`~pai_parser.slicer.SliceIterableEmpty` exception
     when the given iterable has no items.
     """
     with pytest.raises(slicer.SliceIterableEmpty):
@@ -50,8 +50,8 @@ def test_iter_slice_raises_on_empty_iterable():
 
 def test_iter_slice_raises_on_exhausted_iterable(iterable_with_incorrect_size):
     """
-    Assert that :func:`~paip.slicer.iter_slice` raises a :class:`~paip.slicer.SliceIterableExhausted` exception
-    when the given iterable yields less than 'n' requested items.
+    Assert that :func:`~pai_parser.slicer.iter_slice` raises a :class:`~pai_parser.slicer.SliceIterableExhausted`
+    exception when the given iterable yields less than 'n' requested items.
     """
     with pytest.raises(slicer.SliceIterableExhausted):
         slicer.iter_slice(*iterable_with_incorrect_size)
@@ -59,7 +59,7 @@ def test_iter_slice_raises_on_exhausted_iterable(iterable_with_incorrect_size):
 
 def test_iter_returns_correctly_sized_slice(iterable_with_correct_size):
     """
-    Assert that :func:`~paip.slicer.iter_slice` returns 'n' number of items.
+    Assert that :func:`~pai_parser.slicer.iter_slice` returns 'n' number of items.
     """
     iterable, n = iterable_with_correct_size
 
@@ -69,7 +69,7 @@ def test_iter_returns_correctly_sized_slice(iterable_with_correct_size):
 
 def test_iter_returns_slice_with_given_class(iterable_with_correct_size):
     """
-    Assert that :func:`~paip.slicer.iter_slice` returns the slice based on the 'slice_cls' parameter.
+    Assert that :func:`~pai_parser.slicer.iter_slice` returns the slice based on the 'slice_cls' parameter.
     """
     list_items = slicer.iter_slice(*iterable_with_correct_size, slice_cls=list)
     assert isinstance(list_items, list)

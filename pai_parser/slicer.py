@@ -1,6 +1,6 @@
 """
-    paip.slicer
-    ~~~~~~~~~~~
+    pai_parser.slicer
+    ~~~~~~~~~~~~~~~~~
 
     Module for creating slices from iterables.
 """

@@ -1,6 +1,6 @@
-# paip/requirements/test.txt
+# pai_parser/requirements/test.txt
 # 
-# Requirements for executing the paip test suite.
+# Requirements for executing the pai_parser test suite.
 
 pytest
 pytest-cov

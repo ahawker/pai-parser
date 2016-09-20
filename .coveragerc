@@ -1,5 +1,5 @@
 [run]
-source = paip
+source = pai_parser
 branch = true
 omit = tests/*
 

@@ -1,27 +1,27 @@
-# paip (pai-parser)
+# pai-parser
 
-[![Build Status](https://travis-ci.org/ahawker/paip.svg?branch=master)](https://travis-ci.org/ahawker/paip)
-[![Coverage Status](https://coveralls.io/repos/github/ahawker/paip/badge.svg?branch=master)](https://coveralls.io/github/ahawker/paip?branch=master)
+[![Build Status](https://travis-ci.org/ahawker/pai-parser.svg?branch=master)](https://travis-ci.org/ahawker/pai-parser)
+[![Coverage Status](https://coveralls.io/repos/github/ahawker/pai-parser/badge.svg?branch=master)](https://coveralls.io/github/ahawker/pai-parser?branch=master)
 
 Describe and parse shell-safe strings into a structured syntax.
 
-This package is used as the underlying parser for the [pai](https://github.com/ahawker/pai) language.
+This package is used as the underlying parser for [pai-lang](https://github.com/ahawker/pai-lang).
 
 ### Status
 
-`paip` is in alpha stage and not yet used by any production workloads.
+`pai-parser` is in alpha stage and not yet used by any production workloads.
 
 ### Installation
 
-Install `paip` using [pip](https://pypi.python.org/pypi/pip):
+Install `pai-parser` using [pip](https://pypi.python.org/pypi/pip):
 ```bash
-    $ pip install paip
+    $ pip install pai_parser
 ```
 
-Install `paip` from source:
+Install `pai-parser` from source:
 ```bash
-    $ git clone git@github.com:ahawker/paip.git
-    $ cd paip
+    $ git clone git@github.com:ahawker/pai_parser.git
+    $ cd pai_parser
     $ python setup.py install
 ```
 

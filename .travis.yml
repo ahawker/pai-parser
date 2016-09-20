@@ -1,4 +1,4 @@
-# https://travis-ci.org/ahawker/paip
+# https://travis-ci.org/ahawker/pai_parser
 
 sudo: false
 language: python

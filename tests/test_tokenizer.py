@@ -2,14 +2,14 @@
     test_tokenizer
     ~~~~~~~~~~~~~~
 
-    Tests for the :mod:`~paip.tokenizer` module.
+    Tests for the :mod:`~pai_parser.tokenizer` module.
 """
 
 import collections
 import pytest
 import shlex
 
-from paip import tokenizer
+from pai_parser import tokenizer
 
 
 @pytest.mark.parametrize('data', [

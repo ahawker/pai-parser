@@ -2,12 +2,12 @@
     test_parser
     ~~~~~~~~~~~
 
-    Tests for the :mod:`~paip.parser` module.
+    Tests for the :mod:`~pai_parser.parser` module.
 """
 
 import pytest
 
-from paip import parser
+from pai_parser import parser
 
 
 @pytest.fixture(scope='function')
@@ -75,7 +75,7 @@ def is_a_reverse_shallow_copy_list(x, y):
 
 def test_parse_gen_raises_on_non_conforming_visitor(non_conforming_visitor):
     """
-    Assert that :meth:`~paip.parser.parse_gen` raises a :class:`ValueError` when given an object that does not
+    Assert that :meth:`~pai_parser.parser.parse_gen` raises a :class:`ValueError` when given an object that does not
     conform to the visitor interface.
     """
     with pytest.raises(ValueError):
@@ -84,7 +84,7 @@ def test_parse_gen_raises_on_non_conforming_visitor(non_conforming_visitor):
 
 def test_parse_raises_on_non_conforming_visitor(non_conforming_visitor):
     """
-    Assert that :meth:`~paip.parser.parse` raises a :class:`ValueError` when given an object that does not
+    Assert that :meth:`~pai_parser.parser.parse` raises a :class:`ValueError` when given an object that does not
     conform to the visitor interface.
     """
     with pytest.raises(ValueError):
@@ -93,7 +93,7 @@ def test_parse_raises_on_non_conforming_visitor(non_conforming_visitor):
 
 def test_parse_gen_raises_on_non_supporting_visitor(non_supporting_visitor):
     """
-    Assert that :meth:`~paip.parser.parse_gen` raises a :class:`ValueError` when given a visitor object that
+    Assert that :meth:`~pai_parser.parser.parse_gen` raises a :class:`ValueError` when given a visitor object that
     returns :bool:`False` from its :func:`support` function.
     """
     with pytest.raises(ValueError):
@@ -102,7 +102,7 @@ def test_parse_gen_raises_on_non_supporting_visitor(non_supporting_visitor):
 
 def test_parse_raises_on_non_supporting_visitor(non_supporting_visitor):
     """
-    Assert that :meth:`~paip.parser.parse` raises a :class:`ValueError` when given a visitor object that
+    Assert that :meth:`~pai_parser.parser.parse` raises a :class:`ValueError` when given a visitor object that
     returns :bool:`False` from its :func:`support` function.
     """
     with pytest.raises(ValueError):
@@ -111,7 +111,7 @@ def test_parse_raises_on_non_supporting_visitor(non_supporting_visitor):
 
 def test_parse_gen_visits_expected_number_of_nodes(single_token_ordered_visitor, valid_data_string_with_group_size):
     """
-    Assert that :meth:`~paip.parser.parse_gen` visits and yields the expected number of nodes based on the input
+    Assert that :meth:`~pai_parser.parser.parse_gen` visits and yields the expected number of nodes based on the input
     and group size.
     """
     valid_data_string, n, expected_len = valid_data_string_with_group_size
@@ -122,7 +122,7 @@ def test_parse_gen_visits_expected_number_of_nodes(single_token_ordered_visitor,
 
 def test_parse_visits_expected_number_of_nodes(single_token_ordered_visitor, valid_data_string_with_group_size):
     """
-    Assert that :meth:`~paip.parser.parse` visits and yields the expected number of nodes based on the input
+    Assert that :meth:`~pai_parser.parser.parse` visits and yields the expected number of nodes based on the input
     and group size.
     """
     valid_data_string, n, expected_len = valid_data_string_with_group_size
@@ -133,7 +133,7 @@ def test_parse_visits_expected_number_of_nodes(single_token_ordered_visitor, val
 
 def test_parse_gen_reverses_tokens_on_rtl(single_token_ordered_visitor, valid_data_string_with_group_size):
     """
-    Assert that :meth:`~paip.parser.parse_gen` visits and yields nodes in "reverse" order when using
+    Assert that :meth:`~pai_parser.parser.parse_gen` visits and yields nodes in "reverse" order when using
     right-to-left mode.
     """
     valid_data_string, n, expected_len = valid_data_string_with_group_size
@@ -146,7 +146,7 @@ def test_parse_gen_reverses_tokens_on_rtl(single_token_ordered_visitor, valid_da
 
 def test_parse_reverses_tokens_on_rtl(single_token_ordered_visitor, valid_data_string_with_group_size):
     """
-    Assert that :meth:`~paip.parser.parse` visits and yields nodes in "reverse" order when using
+    Assert that :meth:`~pai_parser.parser.parse` visits and yields nodes in "reverse" order when using
     right-to-left mode.
     """
     valid_data_string, n, expected_len = valid_data_string_with_group_size
@@ -159,7 +159,7 @@ def test_parse_reverses_tokens_on_rtl(single_token_ordered_visitor, valid_data_s
 
 def test_parse_gen_visits_expected_number_of_nodes_with_default_visitor(valid_data_string_with_group_size):
     """
-    Assert that :meth:`~paip.parser.parse_gen` visits and yields the expected number of nodes based on the input
+    Assert that :meth:`~pai_parser.parser.parse_gen` visits and yields the expected number of nodes based on the input
     and group size when using the default visitor.
     """
     valid_data_string, n, expected_len = valid_data_string_with_group_size
@@ -170,7 +170,7 @@ def test_parse_gen_visits_expected_number_of_nodes_with_default_visitor(valid_da
 
 def test_parse_visits_expected_number_of_nodes_with_default_visitor(valid_data_string_with_group_size):
     """
-    Assert that :meth:`~paip.parser.parse` visits and yields the expected number of nodes based on the input
+    Assert that :meth:`~pai_parser.parser.parse` visits and yields the expected number of nodes based on the input
     and group size when using the default visitor.
     """
     valid_data_string, n, expected_len = valid_data_string_with_group_size

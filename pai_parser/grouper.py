@@ -1,6 +1,6 @@
 """
-    paip.grouper
-    ~~~~~~~~~~~~
+    pai_parser.grouper
+    ~~~~~~~~~~~~~~~~~~
 
     Module for creating child groups from iterables.
 """

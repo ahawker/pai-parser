@@ -1,11 +1,11 @@
 """
-    paip.parser
-    ~~~~~~~~~~~
+    pai_parser.parser
+    ~~~~~~~~~~~~~~~~~
 
     Module for parsing shell-safe strings into objects.
 """
 
-from paip import grouper, tokenizer
+from pai_parser import grouper, tokenizer
 
 
 __all__ = ['parse', 'parse_gen']

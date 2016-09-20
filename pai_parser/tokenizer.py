@@ -1,6 +1,6 @@
 """
-    paip.tokenizer
-    ~~~~~~~~~~~~~~
+    pai_parser.tokenizer
+    ~~~~~~~~~~~~~~~~~~~~
 
     Module for parsing strings into a collection of tokens.
 """

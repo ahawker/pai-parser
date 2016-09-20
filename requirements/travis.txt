@@ -1,6 +1,6 @@
-# paip/requirements/travis.txt
+# pai_parser/requirements/travis.txt
 #
-# Requirements for executing the paip test suite on Travis CI.
+# Requirements for executing the pai_parser test suite on Travis CI.
 
 -r tox.txt
 
