@@ -1,4 +1,4 @@
-# pai_parser/requirements/travis.txt
+# pai-parser/requirements/travis.txt
 #
 # Requirements for executing the pai_parser test suite on Travis CI.
 

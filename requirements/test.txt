@@ -1,6 +1,8 @@
-# pai_parser/requirements/test.txt
+# pai-parser/requirements/test.txt
 # 
 # Requirements for executing the pai_parser test suite.
+
+-r base.txt
 
 pytest
 pytest-cov

@@ -1,4 +1,4 @@
-# pai_parser/requirements/tox.txt
+# pai-parser/requirements/tox.txt
 #
 # Requirements for executing the pai_parser test suite using tox.
 
