@@ -38,7 +38,7 @@ setup(
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
         'Natural Language :: English',
-        'License :: OSI Approved :: Apache 2.0 License',
+        'License :: OSI Approved :: Apache Software License',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
