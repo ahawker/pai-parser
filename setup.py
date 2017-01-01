@@ -23,11 +23,11 @@ def get_version():
 
 
 setup(
-    name='pai_parser',
+    name='pai-parser',
     version=get_version(),
     author='Andrew Hawker',
     author_email='andrew.r.hawker@gmail.com',
-    url='https://github.com/ahawker/pai_parser',
+    url='https://github.com/ahawker/pai-parser',
     license='Apache 2.0',
     description='Describe and parse shell-safe strings into a structured syntax.',
     long_description=__doc__,
