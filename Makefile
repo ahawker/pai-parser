@@ -42,10 +42,3 @@ git-push-with-tags:
 push-patch: bump-patch git-push-with-tags
 push-minor: bump-minor git-push-with-tags
 push-major: bump-major git-push-with-tags
-
-pypi-upload:
-	python setup.py sdist bdist_wheel upload
-
-release-patch: push-patch pypi-upload
-release-minor: push-minor pypi-upload
-release-major: push-major pypi-upload
