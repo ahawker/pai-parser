@@ -8,10 +8,22 @@ install: make travis-install
 script: make travis-script
 after_success: coveralls
 deploy:
-  provider: pypi
-  user: "Andrew.Hawker"
-  password:
-    secure: B86Xw3dRV6cBnrB1ehe2R6RNPdTItnIISbIuewFMtW/HzCgWOJ501Jl5a7pgHi7A79nxZlirf7R5W+aR2C+puPDTx5g1ejOnj8qRMZxHjfYCYA8PAvmLJYfj/y4F5sNIFALC1FZytxFL4IikP63dHg7TL8pW0WAcTUwnEkOv2L2WNYMVmSobUA6opAMrQCiz1I0IY39bDYSctiqaRYEAdh9XDnzEhtP1WQdDEDJ5sEfWl8Durka/9296QT3NuSofYXobAgFcQPSWKwdSr58Q0IpEn40fQI+7wAujfnlVYs838m66DS7FLU1c3rxeZ8N/If8js6fEoLwdEG6ANFGgkdMAZF4FLswivd76dg1Q4GurvIyOj0A3Ml7pUANRXu3tD3KA3evoL1K5CxZhghNQycm0x+5ME1M3CMOLSaWyfUYT3Y2O6K/z2jYCg+tlLGGo4cFuZb0OXK69Rs952cWzv0Na8tYeZEQ1++voEv0fG8yQ+bRI1upNPq1tRjzSXG7ifhH9ArA1gb2SBt6eROcKM+c2QWcHcR4I3tlHOYEry7eHktZQTOZffL3JJtKGqaCv3un+c/rUl9edXKxnFD7LM/VM9kWFRNNKaoGWQZYfcSN86HLiX347+CJiHwe9zw6XA/SUrOms1Zesr1B7OmWAywlbU06Off/N5sXfdKTETAw=
-  distributions: "sdist bdist_wheel"
-  on:
-    tags: true
+  - provider: pypi
+    server: https://testpypi.python.org/pypi
+    user: "Andrew.Hawker"
+    password:
+      secure: B86Xw3dRV6cBnrB1ehe2R6RNPdTItnIISbIuewFMtW/HzCgWOJ501Jl5a7pgHi7A79nxZlirf7R5W+aR2C+puPDTx5g1ejOnj8qRMZxHjfYCYA8PAvmLJYfj/y4F5sNIFALC1FZytxFL4IikP63dHg7TL8pW0WAcTUwnEkOv2L2WNYMVmSobUA6opAMrQCiz1I0IY39bDYSctiqaRYEAdh9XDnzEhtP1WQdDEDJ5sEfWl8Durka/9296QT3NuSofYXobAgFcQPSWKwdSr58Q0IpEn40fQI+7wAujfnlVYs838m66DS7FLU1c3rxeZ8N/If8js6fEoLwdEG6ANFGgkdMAZF4FLswivd76dg1Q4GurvIyOj0A3Ml7pUANRXu3tD3KA3evoL1K5CxZhghNQycm0x+5ME1M3CMOLSaWyfUYT3Y2O6K/z2jYCg+tlLGGo4cFuZb0OXK69Rs952cWzv0Na8tYeZEQ1++voEv0fG8yQ+bRI1upNPq1tRjzSXG7ifhH9ArA1gb2SBt6eROcKM+c2QWcHcR4I3tlHOYEry7eHktZQTOZffL3JJtKGqaCv3un+c/rUl9edXKxnFD7LM/VM9kWFRNNKaoGWQZYfcSN86HLiX347+CJiHwe9zw6XA/SUrOms1Zesr1B7OmWAywlbU06Off/N5sXfdKTETAw=
+    distributions: sdist
+    on:
+      branch: master
+      tags: false
+      condition: $TRAVIS_PYTHON_VERSION = "3.5"
+  - provider: pypi
+    user: "Andrew.Hawker"
+    password:
+      secure: B86Xw3dRV6cBnrB1ehe2R6RNPdTItnIISbIuewFMtW/HzCgWOJ501Jl5a7pgHi7A79nxZlirf7R5W+aR2C+puPDTx5g1ejOnj8qRMZxHjfYCYA8PAvmLJYfj/y4F5sNIFALC1FZytxFL4IikP63dHg7TL8pW0WAcTUwnEkOv2L2WNYMVmSobUA6opAMrQCiz1I0IY39bDYSctiqaRYEAdh9XDnzEhtP1WQdDEDJ5sEfWl8Durka/9296QT3NuSofYXobAgFcQPSWKwdSr58Q0IpEn40fQI+7wAujfnlVYs838m66DS7FLU1c3rxeZ8N/If8js6fEoLwdEG6ANFGgkdMAZF4FLswivd76dg1Q4GurvIyOj0A3Ml7pUANRXu3tD3KA3evoL1K5CxZhghNQycm0x+5ME1M3CMOLSaWyfUYT3Y2O6K/z2jYCg+tlLGGo4cFuZb0OXK69Rs952cWzv0Na8tYeZEQ1++voEv0fG8yQ+bRI1upNPq1tRjzSXG7ifhH9ArA1gb2SBt6eROcKM+c2QWcHcR4I3tlHOYEry7eHktZQTOZffL3JJtKGqaCv3un+c/rUl9edXKxnFD7LM/VM9kWFRNNKaoGWQZYfcSN86HLiX347+CJiHwe9zw6XA/SUrOms1Zesr1B7OmWAywlbU06Off/N5sXfdKTETAw=
+    distributions: "sdist bdist_wheel"
+    on:
+      branch: master
+      tags: true
+      condition: $TRAVIS_PYTHON_VERSION = "3.5"
