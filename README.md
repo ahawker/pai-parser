@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/ahawker/pai-parser.svg?branch=master)](https://travis-ci.org/ahawker/pai-parser)
 [![Coverage Status](https://coveralls.io/repos/github/ahawker/pai-parser/badge.svg?branch=master)](https://coveralls.io/github/ahawker/pai-parser?branch=master)
+[![Stories in Ready](https://badge.waffle.io/ahawker/pai-parser.svg?label=ready&title=Ready)](http://waffle.io/ahawker/pai-parser)
 
 Describe and parse shell-safe strings into a structured syntax.
 
