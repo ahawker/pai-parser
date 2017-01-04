@@ -31,7 +31,7 @@ Install latest development build using [pip](https://pypi.python.org/pypi/pip):
 
 Install from source code:
 ```bash
-    $ git clone git@github.com:ahawker/pai_parser.git
+    $ git clone git@github.com:ahawker/pai-parser.git
     $ cd pai_parser
     $ python setup.py install
 ```
