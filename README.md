@@ -38,6 +38,7 @@ Install from source code:
 Package deployments to index servers are automatically performed by [Travis CI](https://travis-ci.org/).
 
 [PyPI](https://pypi.python.org/pypi/pai-parser) - Hosts **Official** Builds
+
 [TestPyPI](https://testpypi.python.org/pypi/pai-parser) - Hosts **Development** Builds
 
 Tagged versions of the `master` branch will be deployed to the official PyPI index server while non-tagged versions will be deployed
